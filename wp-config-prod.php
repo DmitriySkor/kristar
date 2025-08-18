@@ -76,9 +76,27 @@ $table_prefix  = 'wp_';
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
-define('WP_DEBUG', false);
+define( 'WP_DEBUG', true );
+define( 'WP_DEBUG_DISPLAY', false );
+define( 'WP_DEBUG_LOG', true );
 
-/* That's all, stop editing! Happy blogging. */
+/**
+ * Disable compression CSS, JS
+ */
+define( 'SCRIPT_DEBUG', true );
+
+/* Add any custom values between this line and the "stop editing" line. */
+
+/**
+ * Cache configuration
+ */
+define('WP_CACHE', true);
+define( 'WPCACHEHOME', '/var/www/html/web/wp-content/plugins/wp-super-cache/' );
+
+/**
+ *
+ */
+# define ('FS_METHOD', 'direct');
 
 /** Absolute path to the WordPress directory. */
 if ( !defined('ABSPATH') )
@@ -86,7 +104,3 @@ if ( !defined('ABSPATH') )
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
-
-define( 'WP_ALLOW_MULTISITE', true );
-
-define ('FS_METHOD', 'direct');
