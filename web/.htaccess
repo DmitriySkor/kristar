@@ -1,0 +1,54 @@
+# HTAccess
+## Blocking unwanted requests
+#<IfModule mod_rewrite.c>
+#    RewriteEngine On
+#    RewriteRule ^umbraco/api/QuoteApi/GetBasketAmount - [F,L]
+#    RewriteRule ^sw.js - [F,L]
+#</IfModule>
+
+## Blockin IP
+#<RequireAll>
+#    Require all granted
+#    Require not ip 2001:df4:e000:3fc1:a9c3:108:3c6b:13fb
+#    Require not ip 104.234.115.130
+#</RequireAll>
+
+## BEGIN WordPress
+# The directives (lines) between "BEGIN WordPress" and "END WordPress" are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+    RewriteBase /
+    RewriteRule ^index\.php$ - [L]
+
+    # add a trailing slash to /wp-admin
+    RewriteRule ^([_0-9a-zA-Z-]+/)?wp-admin$ $1wp-admin/ [R=301,L]
+
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+    RewriteRule ^([_0-9a-zA-Z-]+/)?(wp-(content|admin|includes).*) $2 [L]
+    RewriteRule ^([_0-9a-zA-Z-]+/)?(.*\.php)$ $2 [L]
+    RewriteRule . index.php [L]
+</IfModule>
+
+# Disable access to README.md file
+<Files "README.md">
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+# Disable access to all hiden files in directory
+<FilesMatch "^\.">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
+
+## END WordPress
+
+
+## Allow additional file types
+# AddType application/step .step
+# AddType application/step .stp

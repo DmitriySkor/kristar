@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /wp-content/uploads/
+Disallow: /wp-admin/
+Disallow: /*?
+Allow: /wp-admin/admin-ajax.php
+
+# Sitemap
+Sitemap: https://kristar.show/sitemap_index.xml
