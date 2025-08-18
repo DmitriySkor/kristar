@@ -1,0 +1,19 @@
+# GITIgnore settings for WordPress project
+
+## Unnecessary language files
+### .pot files can be regenerated with wp i18n make-pot
+### .po~ files are backups created by Poedit
+### .mo files are not ignored because they won't be generated automatically on install.
+/languages/*.po~
+/languages/*.pot~
+
+## Ignore OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+## Ignore PHPStorm configuration
+/.idea
+
+## Ignore VSCode configuration
+/.vscode

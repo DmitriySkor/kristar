@@ -1,0 +1,25 @@
+<?php
+return array(
+	'project-id-version'        => 'BlueSky Core',
+	'report-msgid-bugs-to'      => '',
+	'pot-creation-date'         => '2024-06-15 19:04+0000',
+	'po-revision-date'          => '2024-10-18 20:16+0000',
+	'last-translator'           => 'Roman',
+	'language-team'             => 'Ukrainian',
+	'language'                  => 'uk',
+	'plural-forms'              => 'nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10 >= 2 && n%10<=4 &&(n%100<10||n%100 >= 20)? 1 : 2);',
+	'mime-version'              => '1.0',
+	'content-type'              => 'text/plain; charset=UTF-8',
+	'content-transfer-encoding' => '8bit',
+	'x-generator'               => 'Loco https://localise.biz/',
+	'x-loco-version'            => '2.6.11; wp-6.6.2',
+	'x-domain'                  => 'bs_core',
+	'messages'                  => array(
+		'A set of basic functions for operation with WordPress themes and plugins <cite>By Sergiy Pushenko.</cite>' => 'Набір базових функцій для роботи з темами і плагінами Wordpress <cite>Від Пушенко Сергія.</cite>',
+		'BlueSky Core'    => 'BlueSky Ядро',
+		'Choose Image'    => 'Виберіть зображення',
+		'Image for menu'  => 'Картинка для меню',
+		'Remove'          => 'Видалити',
+		'Sergiy Pushenko' => 'Пушенко Сергій',
+	),
+);

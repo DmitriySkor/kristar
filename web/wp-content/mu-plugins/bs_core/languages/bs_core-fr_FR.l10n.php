@@ -1,0 +1,25 @@
+<?php
+return array(
+	'project-id-version'        => 'BlueSky Core',
+	'report-msgid-bugs-to'      => '',
+	'pot-creation-date'         => '2023-08-14 21:11+0000',
+	'po-revision-date'          => '2024-10-18 20:10+0000',
+	'last-translator'           => '',
+	'language-team'             => 'French (France)',
+	'language'                  => 'fr_FR',
+	'plural-forms'              => 'nplurals=2; plural=n > 1;',
+	'mime-version'              => '1.0',
+	'content-type'              => 'text/plain; charset=UTF-8',
+	'content-transfer-encoding' => '8bit',
+	'x-generator'               => 'Loco https://localise.biz/',
+	'x-loco-version'            => '2.6.10; wp-6.5.5',
+	'x-domain'                  => 'bs_core',
+	'messages'                  => array(
+		'A set of basic functions for operation with WordPress themes and plugins <cite>By Sergiy Pushenko.</cite>' => 'Un ensemble de fonctions de base pour l\'utilisation de thèmes et de plugins WordPress <cite>Par Sergiy Pushenko.</cite>',
+		'BlueSky Core'    => 'BlueSky Cœur',
+		'Choose Image'    => 'Choisir une image',
+		'Image for menu'  => 'Image du menu',
+		'Remove'          => 'Retirer',
+		'Sergiy Pushenko' => 'Sergiy Pushenko',
+	),
+);

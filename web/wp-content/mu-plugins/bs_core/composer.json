@@ -1,0 +1,26 @@
+{
+  "name": "bluesky/bs_core",
+  "description": "A set of basic functions for operation with WordPress themes and plugins.",
+  "type": "wordpress-muplugin",
+  "authors": [
+    {
+      "name": "Sergiy Pushenko",
+      "email": "dftpsp@gmail.com"
+    }
+  ],
+  "version": "1.15.0",
+  "require": {
+    "php": ">=8.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "BlueSky\\MuPlugin\\CorePlugin\\": "src/"
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true,
+      "composer/installers": true
+    }
+  }
+}
