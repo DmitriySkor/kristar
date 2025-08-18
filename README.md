@@ -89,16 +89,13 @@
 ### DB :
 - Backup :
   - MySQL :
-    - mysqldump -u user -p db > kristar.sql
-    - mysqldump -u user -p db | gzip -9 > kristar_$(date +"%Y%m%d_%H%M%S").sql.gz
-  - MariaDB
-    - mariadb-dump -u user -p db | gzip -9 > kristar.sql.gz
-    - mariadb-dump -u user -p db | gzip -9 > kristar_$(date +"%Y%m%d_%H%M%S").sql.gz
+    - mysqldump -u u675256559_bubbleswp -p u675256559_bubkrist444 > kristar.sql
+    - mysqldump -u u675256559_bubbleswp -p u675256559_bubkrist444 | gzip -9 > kristar_$(date +"%Y%m%d_%H%M%S").sql.gz
 - Restore :
-  - mysql -u name -p db < kristar.sql
+  - mysql -u u675256559_bubbleswp -p u675256559_bubkrist444 < kristar.sql
 
 ## Users
-| # | User  | Password | E-mail             |
-|---|-------|----------|--------------------|
-| 1 | admin | -        | rionskey@gmail.com |
-| 2 | qa    | -        | xxx@xxx.com        |
+| # | User  | Password              | E-mail             |
+|---|-------|-----------------------|--------------------|
+| 1 | admin | aM4tCTIFlMHrhRp4i1WbS | rionskey@gmail.com |
+| 2 | qa    | -                     | xxx@xxx.com        |
