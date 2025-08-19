@@ -31,14 +31,16 @@ if( !isset( $montoya_default_theme_options ) ){
 	$montoya_default_theme_options['clapat_montoya_footer_copyright'] = wp_kses( __('2024 © <a class="link" target="_blank" href="https://www.clapat-themes.com/">ClaPat</a>. All rights reserved.', 'montoya'), 'montoya_allowed_html' );
 	$montoya_default_theme_options['clapat_montoya_footer_social_links_prefix'] = esc_html__( 'Follow Us', 'montoya' );
 	$montoya_default_theme_options['clapat_montoya_social_links_icons'] = 0;
-	global $montoya_social_links;
-	$social_network_ids = array_keys( $montoya_social_links );
-	for( $idx = 1; $idx <= MONTOYA_MAX_SOCIAL_LINKS; $idx++ ){
 
-		$montoya_default_theme_options['clapat_montoya_footer_social_' . $idx] = montoya_social_network_default( $idx );
-		$montoya_default_theme_options['clapat_montoya_footer_social_url_' . $idx] = montoya_social_network_url_default( $idx );
-	}
-	
+	global $montoya_social_links;
+    if ( ! empty ( $montoya_social_links ) && is_array( $montoya_social_links ) ) {
+        $social_network_ids = array_keys( $montoya_social_links );
+        for( $idx = 1; $idx <= MONTOYA_MAX_SOCIAL_LINKS; $idx++ ){
+            $montoya_default_theme_options['clapat_montoya_footer_social_' . $idx] = montoya_social_network_default( $idx );
+            $montoya_default_theme_options['clapat_montoya_footer_social_url_' . $idx] = montoya_social_network_url_default( $idx );
+        }
+    }
+
 	// Portfolio Settings
 	$montoya_default_theme_options['clapat_core_portfolio_custom_slug'] = '';
 	$montoya_default_theme_options['clapat_montoya_portfolio_nav_autotrigger'] = 1;
